@@ -1,34 +1,29 @@
 import java.util.*;
 
-public class WordList
-{
+public class WordList{
   private ArrayList <String> myList;
 
   public WordList() { myList = new ArrayList<String>(); }
   public void add(String word) { myList.add(word); }
   public String toString() { return myList.toString(); }
 
-  public int numWordsOfLength(int len)
-  {
+  public int numWordsOfLength(int len){
     /* to be implemented in part (a) */
-int count = 0;
-    for(int i = 0; i < myList.size();i++){
-      if(mylist.get(i).length() == len){
+    int count = 0;
+    for(int i = 0; i < myList.size(); i++)
+      if(myList.get(i).length() == len)
         count++;
-      }
-    }
     return count;
   }
 
-  public void removeWordsOfLength(int len)
-  {
+  public void removeWordsOfLength(int len){
     /* to be implemented in part (b) */
-int i = 0;
+    int i = 0;
     while(i < myList.size()){
-      if(myList.get(i).length() == len){
+      if(myList.get(i).length() == len)
         myList.remove(i);
-        else{
+      else
         i++;
-      }
     }
+  }
 }
